@@ -4,6 +4,7 @@
     COPY package*.json ./
     RUN npm ci
     COPY . .
+    RUN chmod +x node_modules/.bin/vite
     RUN npm run build   
         
     # ---------- Run stage ----------
